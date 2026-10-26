@@ -34,19 +34,20 @@ index.html은 시맨틱구조, css/style.css는 반응형/테마, js/main.js는 
 |---|---|---|
 | 로컬 제품 UI | PASS | 부모가 실제 Chrome에서 테마·메뉴·앵커·폼·반응형 등 24개 관측 그룹을 확인 |
 | 모의 API/재시도 | PASS | 부모가 개발용 검증 화면의 최종 12행 PASS/0 FAIL을 확인; 실제 서비스 호출과 구분 |
-| 실제 GitHub API | PASS | 부모의 실제 버튼 조회 1회에서 당시 공개 저장소 27개 표시 |
+| 실제 GitHub API | PASS | 공개 Pages 버튼 조회 1회로 실제 api.github.com GET, HTTP 200과 27개 저장소 카드 확인 |
 | 실제 PNG 3장 저장/내용 확인 | PASS | GPT-6 Luna / Max가 Playwright의 headless Google Chrome 156.0.8078.47에서 저장하고 PNG 형식·크기·화면을 확인 |
-| GitHub Pages | NOT_RUN | 공개 저장소·Pages를 만들지 않음 |
+| GitHub Pages | PASS | Pages API status=built, URL HTTP 200, HTML/CSS/JS/프로필/PNG 8개 SHA-256 원본 일치 |
 | 실제 제출 | NOT_RUN | 제출처·행위·접수 확인 없음 |
 
 별도 후속 관측에서 VS Code Live Server 5500의 실행과 파일 변경 자동 반영·원본 복원을 확인했습니다. PNG 촬영은 로컬 Python HTTP 서버를 사용했으며, 새 브라우저 context의 Projects 초기 상태를 촬영했습니다. 기존 사용자 Chrome 프로필이나 인증 세션은 사용하지 않았습니다.
 
 checks/·.vscode/·execution.md는 개발용으로 공개업로드에서 제외합니다. 모의통과는 실제서비스·배포완료의 증거가 아닙니다.
 
-## URL
+## 공개 URL
 
-- 저장소: 아직 생성하지 않음 (NOT_RUN)
-- 배포: 미배포 (NOT_RUN)
+- 저장소: [kjs8303/test_b_4_1](https://github.com/kjs8303/test_b_4_1)
+- GitHub Pages: [https://kjs8303.github.io/test_b_4_1/](https://kjs8303.github.io/test_b_4_1/)
+- 게시 확인: 2026-10-27, Pages API 상태 built, 외부 페이지 HTTP 200. headless Chrome 156.0.8078.47에서 1280×900 및 390×900 화면 동작을 확인했습니다.
 
 ## 스크린샷
 
