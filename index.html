@@ -1,0 +1,108 @@
+<!doctype html>
+<html lang="ko" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="kjs83036의 웹 기초 학습용 포트폴리오">
+  <title>kjs83036 | 웹 기초 실습</title>
+  <link rel="stylesheet" href="css/style.css">
+  <script type="module" src="js/main.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#hero">본문으로 이동</a>
+  <header id="site-header">
+    <nav class="container nav-row" aria-label="주 메뉴">
+      <a class="brand" href="#hero" data-scroll>kjs83036</a>
+      <div class="nav-actions">
+        <button id="theme-toggle" type="button" aria-pressed="false">다크 모드 켜기</button>
+        <button id="menu-toggle" type="button" aria-controls="nav-links" aria-expanded="false">메뉴 열기</button>
+      </div>
+      <ul id="nav-links">
+        <li><a href="#hero" data-scroll>처음</a></li>
+        <li><a href="#about" data-scroll>소개</a></li>
+        <li><a href="#skills" data-scroll>기술</a></li>
+        <li><a href="#projects" data-scroll>프로젝트</a></li>
+        <li><a href="#contact" data-scroll>문의</a></li>
+        <li><a href="#footer" data-scroll>끝</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="container">
+    <section id="hero" class="hero" aria-labelledby="hero-title">
+      <p class="eyebrow">HTML · CSS · JavaScript</p>
+      <h1 id="hero-title">안녕하세요, kjs83036입니다.</h1>
+      <p>웹 기초를 학습하며 이벤트가 화면을 바꾸는 과정을 연습합니다.</p>
+      <p>이 페이지의 소개와 아바타는 실습용입니다.</p>
+      <div class="cta-row">
+        <a class="button" href="#projects" data-scroll>프로젝트 보기</a>
+        <a class="button secondary" href="#contact" data-scroll>문의 폼 살펴보기</a>
+      </div>
+      <p id="theme-status" role="status"></p>
+    </section>
+    <section id="about" aria-labelledby="about-title">
+      <h2 id="about-title" class="reveal">소개</h2>
+      <article class="about-card reveal">
+        <img src="images/profile.svg" width="240" height="240"
+             alt="웹 기초 실습을 위해 직접 그린 원형 인물 아바타">
+        <div>
+          <h3>작은 동작부터 이해하기</h3>
+          <p>시맨틱 HTML로 내용을 구성하고 CSS로 배치하며 JavaScript로 상태를 바꾸는 실습을 합니다.</p>
+          <p>학력·경력·성과를 소개하는 실제 이력서가 아닌 학습용 자기소개입니다.</p>
+        </div>
+      </article>
+    </section>
+    <section id="skills" aria-labelledby="skills-title">
+      <h2 id="skills-title" class="reveal">학습 중인 기술</h2>
+      <ul class="skill-list">
+        <li>HTML: 의미 있는 문서 구조</li>
+        <li>CSS: Flexbox와 Grid</li>
+        <li>JavaScript: DOM과 이벤트</li>
+        <li>비동기: fetch와 async/await</li>
+      </ul>
+    </section>
+    <section id="projects" aria-labelledby="projects-title">
+      <h2 id="projects-title" class="reveal">GitHub 프로젝트</h2>
+      <p>kjs83036의 공개 저장소를 최신 수정순으로 최대100개 조회합니다. fork도 포함합니다.</p>
+      <p id="project-status" role="status" data-state="idle">버튼을 누르면 공개 저장소를 조회합니다.</p>
+      <p id="project-detail"></p>
+      <button id="project-load" type="button">GitHub 프로젝트 불러오기</button>
+      <button id="project-retry" type="button" hidden>다시 시도</button>
+      <div id="project-list" class="project-grid" aria-busy="false"></div>
+    </section>
+    <section id="contact" aria-labelledby="contact-title">
+      <h2 id="contact-title" class="reveal">문의 폼</h2>
+      <p>입력 검증 실습입니다. 실제 메일은 전송되지 않습니다.</p>
+      <form id="contact-form" class="reveal" novalidate>
+        <div class="field">
+          <label for="name">이름</label>
+          <input id="name" name="name" type="text" required data-field
+                 autocomplete="name" aria-describedby="name-error" aria-invalid="false">
+          <p id="name-error" class="field-error"></p>
+        </div>
+        <div class="field">
+          <label for="email">이메일</label>
+          <input id="email" name="email" type="email" required data-field
+                 autocomplete="email" aria-describedby="email-error" aria-invalid="false">
+          <p id="email-error" class="field-error"></p>
+        </div>
+        <div class="field">
+          <label for="message">메시지</label>
+          <textarea id="message" name="message" rows="5" required data-field
+                    aria-describedby="message-error" aria-invalid="false"></textarea>
+          <p id="message-error" class="field-error"></p>
+        </div>
+        <button type="submit">입력 확인</button>
+        <p id="form-status" role="status"></p>
+      </form>
+    </section>
+  </main>
+  <footer id="footer">
+    <div class="container">
+      <p>© <span id="year">2026</span> kjs83036 · 웹 기초 실습용 소개</p>
+      <a href="https://github.com/kjs83036" target="_blank" rel="noopener noreferrer">GitHub 프로필</a>
+      <a href="https://github.com/kjs83036?tab=repositories" target="_blank" rel="noopener noreferrer">GitHub 공개 저장소</a>
+    </div>
+  </footer>
+  <button id="scroll-top" class="scroll-top" type="button" hidden>맨 위로</button>
+</body>
+</html>

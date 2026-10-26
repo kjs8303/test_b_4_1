@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="240" height="240" viewBox="0 0 240 240">
+  <title>실습용 인물 아바타</title>
+  <rect width="240" height="240" rx="120" fill="#e2e8f0"/>
+  <circle cx="120" cy="85" r="42" fill="#475569"/>
+  <path d="M40 210c4-48 34-73 80-73s76 25 80 73" fill="#334155"/>
+  <circle cx="105" cy="80" r="4" fill="#ffffff"/>
+  <circle cx="135" cy="80" r="4" fill="#ffffff"/>
+  <path d="M104 101q16 12 32 0" fill="none" stroke="#ffffff" stroke-width="4"/>
+</svg>
